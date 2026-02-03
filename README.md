@@ -169,3 +169,6 @@ This project was designed to reflect **real-world fraud analytics workflows**, e
 
 ---
 
+## Note:
+The original Power BI file contains a large embedded dataset and exceeds GitHub’s file size limit.
+This repository includes a lightweight template PBIX with all visuals, measures, and data model structure preserved.
