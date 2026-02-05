@@ -49,39 +49,86 @@ This reflects a **realistic fraud scenario** with extreme class imbalance.
 
 ##  Analytics & Technical Approach
 
-### 1️. SQL Feature Engineering
 
-Fraud risk indicators were engineered using SQL, including:
-
-* Balance mismatch detection
-* Extreme transaction amount detection (statistical thresholds)
-* Sender-level behavioral baselines
-* Fraud concentration and Pareto analysis
-* Time-based behavioral patterns
-
-**SQL concepts used:**
-
-* CTEs
-* Window functions
-* Aggregations and behavioral metrics
-* Risk scoring logic
+Each SQL file represents a **distinct stage of a professional data analytics pipeline**, similar to workflows used in product and fintech companies.
 
 ---
 
-### 2️. Risk Scoring Framework
+##  Step-by-Step Workflow
 
-Each transaction is assigned a **risk score (0–1)** by combining:
-
-* System fraud flags
-* Balance inconsistencies
-* Amount anomalies
-* Behavioral deviation indicators
-
-This enables **risk prioritization** instead of binary fraud labeling.
+### 1️. Schema Design
+- Designed a normalized transaction schema
+- Defined appropriate data types and constraints
+- Prepared the database for large-scale data ingestion
 
 ---
 
-### 3️. Power BI Fraud Monitoring Dashboard
+### 2️. Data Cleaning & Validation
+- Removed invalid and negative transactions
+- Identified and flagged balance inconsistencies
+- Eliminated records with null critical identifiers
+- Ensured data reliability before downstream analysis
+
+---
+
+### 3️. Feature Engineering
+Engineered fraud-indicative features including:
+- **Balance mismatch flag**
+- **Extreme transaction amount flag**
+- **Zero balance behavior flag**
+- **Amount-based thresholds**
+
+These features are commonly used in **real-world fraud detection systems** to capture abnormal transaction behavior.
+
+---
+
+### 4️. Exploratory Data Analysis (EDA)
+Performed analysis to understand transaction behavior and fraud patterns:
+- Transaction type distribution
+- Fraud rate by transaction type
+- Amount bucket vs fraud probability
+- Time-based transaction behavior
+
+EDA was used to **validate assumptions and surface high-risk patterns**.
+
+---
+
+### 5️. Business Metrics
+Computed **decision-ready KPIs**, including:
+- Overall fraud rate
+- Fraud contribution by transaction type
+- Concentration of fraud among top users
+- Identification of high-risk behavioral segments
+
+These metrics align with what **product, risk, and operations teams** monitor regularly.
+
+---
+
+### 6️. Risk Scoring Model (SQL-based)
+Developed an **interpretable, rule-based risk scoring system** using engineered features such as:
+- Balance mismatch
+- Extreme transaction amounts
+- Zero-balance patterns
+- Flagged fraud indicators
+
+Each transaction is categorized into:
+- **HIGH Risk**
+- **MEDIUM Risk**
+- **LOW Risk**
+
+This scoring approach is suitable for **early-stage deployment** and prioritization before applying machine learning models.
+
+---
+
+### 7️. Final Recommendations
+Based on the analysis, the project identifies:
+- High-risk users recommended for immediate blocking
+- High-risk transactions requiring manual review
+- Behavioral patterns contributing disproportionately to fraud
+
+---
+
+## Power BI Fraud Monitoring Dashboard
 
 **Executive Overview**
 
@@ -139,15 +186,20 @@ This enables **risk prioritization** instead of binary fraud labeling.
 fraud-risk-analytics/
 │
 ├── sql/
-│   ├── feature_engineering.sql
-│   ├── behavioral_analysis.sql
-│
+│   ├── 1.Schema.sql
+│   ├── 2.Data_Cleaning.sql
+|   ├── 3.Feature_Engineering.sql
+|   ├── 4.Exploratory_Analysis.sql
+|   ├── 5.Business_Metrics.sql
+|   ├── 6.Risk_Scoring.sql
+|   ├── 7.Final Recommendation.sql
+|
 ├── powerbi/
-│   ├── README.md
 │   ├── Fraud_Analysis_01_Navigation.png
 |   |── Fraud_Analysis_02_Executive_Overview.png
 |   |── Fraud_Analysis_03_Fraud_Patterns.png
 |   |── Fraud_Analysis_04_High_Risk_Transactions.png
+|   ├── README.md
 |
 ├── insights/
 │   └── dashboard_insights.pdf
