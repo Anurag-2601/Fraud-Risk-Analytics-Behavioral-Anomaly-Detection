@@ -101,23 +101,6 @@ This enables **risk prioritization** instead of binary fraud labeling.
 * Risk score–based prioritization
 * Actionable investigation view
 
-## Fraud Analysis Dashboard (Power BI)
-
- **File size:** 642 MB  
- **Format:** .pbix  
- **Not stored in GitHub due to size constraints**
-
-###  Download Link
-(https://drive.google.com/file/d/1Ls_GIRyHhP9yQjTzJrzfeg46JUfrFbjP/view?usp=drive_link)
-
-###  Notes
-- The dashboard includes transaction-level fraud risk analysis
-- Behavioral anomaly detection using velocity & amount deviation
-- Interactive filters: user, time window, risk score
-
-###  Requirements
-- Power BI Desktop (latest version)
-- At least 8 GB RAM recommended
 
 ---
 
