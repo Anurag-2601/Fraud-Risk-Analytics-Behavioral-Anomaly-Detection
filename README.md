@@ -144,8 +144,11 @@ fraud-risk-analytics/
 │
 ├── powerbi/
 │   ├── README.md
-│   └── Fraud_Analysis_Dashboard_preview.png
-
+│   ├── Fraud_Analysis_01_Navigation.png
+|   |── Fraud_Analysis_02_Executive_Overview.png
+|   |── Fraud_Analysis_03_Fraud_Patterns.png
+|   |── Fraud_Analysis_04_High_Risk_Transactions.png
+|
 ├── insights/
 │   └── dashboard_insights.pdf
 │
